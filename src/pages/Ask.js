@@ -60,6 +60,12 @@ function Ask() {
 
         setPopups((prev) => [...prev, newPopup]);
 
+        setYesSizex((prev) => prev + 2);
+        setYesSizey((prev) => prev + 1);
+        setYesTextSize((prev) => {
+            const currentIndex = textSizes.indexOf(prev);
+            return currentIndex < textSizesLen - 1 ? textSizes[currentIndex + 1] : prev;
+        });
     }
 
 
